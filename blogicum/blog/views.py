@@ -60,7 +60,7 @@ def category_posts(request, category_slug):
         is_published=True,
         pub_date__lte=now)
     context = {
-        'category': category.title,
+        'category': category,
         'post_list': category_posts
     }
     return render(request, template, context)
